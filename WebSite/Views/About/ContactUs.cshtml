@@ -1,0 +1,25 @@
+﻿<h1>Contact Us</h1>
+<form method="post" asp-controller="About" asp-action="GetGuestMessage">
+    <div asp-validation-summary="All" class="alert-danger"></div>
+    <div class="form-group">
+        <label for="exampleInputName">Name</label>
+        <input type="text" class="form-control" id="exampleInputName" placeholder="Enter Name" name="Name">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputSurname">Surname</label>
+        <input type="text" class="form-control" id="exampleInputSurname" placeholder="Enter Surname" name="Surname">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail">Email</label>
+        <input type="email" class="form-control" id="exampleInputEmail" placeholder="Email" name="Email">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputSubject">Subject</label>
+        <input type="text" class="form-control" id="exampleInputSubject" placeholder="Subject" name="Subject">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputMessage">Message</label>
+        <textarea class="form-control" id="exampleInputMessage" name="Message"></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Отправить</button>
+</form>
