@@ -24,3 +24,5 @@ C:\Users\Anatolii\source\repos\WebSite\WebSite\obj\Debug\net6.0\refint\WebSite.d
 C:\Users\Anatolii\source\repos\WebSite\WebSite\obj\Debug\net6.0\WebSite.pdb
 C:\Users\Anatolii\source\repos\WebSite\WebSite\obj\Debug\net6.0\WebSite.genruntimeconfig.cache
 C:\Users\Anatolii\source\repos\WebSite\WebSite\obj\Debug\net6.0\ref\WebSite.dll
+C:\Users\Anatolii\source\repos\WebSite\WebSite\bin\Debug\net6.0\wwwroot\assets\vendor\bootstrap-icons\bootstrap-icons.json
+C:\Users\Anatolii\source\repos\WebSite\WebSite\bin\Debug\net6.0\MyPortfolio\assets\vendor\bootstrap-icons\bootstrap-icons.json

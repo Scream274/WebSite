@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1KHfPGtPT2EKy//1qUppTxH7rtIsHOgXtNOmTJsTWIA=",
+  "Hash": "TXsw/21l7TW/G27I+z3JvwgEy+1RmZaaj1oXbz4e8u4=",
   "Source": "WebSite",
   "BasePath": "_content/WebSite",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Anatolii\\source\\repos\\WebSite\\WebSite\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\WebSite.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Anatolii\\source\\repos\\WebSite\\WebSite\\wwwroot\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.json",
+      "SourceId": "WebSite",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Anatolii\\source\\repos\\WebSite\\WebSite\\wwwroot\\",
+      "BasePath": "_content/WebSite",
+      "RelativePath": "assets/vendor/bootstrap-icons/bootstrap-icons.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.json"
     },
     {
       "Identity": "C:\\Users\\Anatolii\\source\\repos\\WebSite\\WebSite\\wwwroot\\css\\site.css",
