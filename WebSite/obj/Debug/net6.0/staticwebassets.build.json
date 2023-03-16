@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kGvmICcX8+nrlu1jSMAYBqKfYbOhZ1MXzCISNrBVbj8=",
+  "Hash": "ZbChlWpgK26T1DE6P38tmlcbFBH8F8+ChBjDrqD8XAc=",
   "Source": "WebSite",
   "BasePath": "_content/WebSite",
   "Mode": "Default",
@@ -49,6 +49,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Anatolii\\source\\repos\\WebSite\\WebSite\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\WebSite.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Anatolii\\source\\repos\\WebSite\\WebSite\\wwwroot\\assets\\css\\errorpage.css",
+      "SourceId": "WebSite",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Anatolii\\source\\repos\\WebSite\\WebSite\\wwwroot\\",
+      "BasePath": "_content/WebSite",
+      "RelativePath": "assets/css/errorpage.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\css\\errorpage.css"
+    },
+    {
+      "Identity": "C:\\Users\\Anatolii\\source\\repos\\WebSite\\WebSite\\wwwroot\\assets\\js\\errorpage.js",
+      "SourceId": "WebSite",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Anatolii\\source\\repos\\WebSite\\WebSite\\wwwroot\\",
+      "BasePath": "_content/WebSite",
+      "RelativePath": "assets/js/errorpage.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\js\\errorpage.js"
     },
     {
       "Identity": "C:\\Users\\Anatolii\\source\\repos\\WebSite\\WebSite\\wwwroot\\assets\\vendor\\bootstrap-icons\\bootstrap-icons.json",
