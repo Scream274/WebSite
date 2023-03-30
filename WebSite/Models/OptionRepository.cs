@@ -15,5 +15,10 @@ namespace WebSite.Models
         {
             return portfolioDB.Options.OrderBy(o => o.Id);
         }
+
+        public List<Option> GetOptionsByRelation(string relation)
+        {
+            return portfolioDB.Options.Where(o => o.Relation.Contains(relation)).OrderBy(o => o.Order).ToList();
+        }
     }
 }

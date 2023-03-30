@@ -1,0 +1,8 @@
+﻿@using WebSite.Entities;
+
+<div class="col-sm-6 social text-md-end">
+    @foreach (Option opt in Model)
+    {
+        <a href="@opt.Value" title="@opt.Name"><span class="@opt.Key"></span></a>
+    }
+</div>
