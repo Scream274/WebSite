@@ -1,16 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
+using WebSite.Entities;
 using WebSite.Models;
 
 namespace WebSite.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private static PortfolioDBContext dBContext = new PortfolioDBContext(new DbContextOptions<PortfolioDBContext>());
+        private OptionRepository optionRepository = new OptionRepository(dBContext);
 
         public HomeController(ILogger<HomeController> logger)
         {
-            _logger = logger;
+
         }
 
         public IActionResult Index()

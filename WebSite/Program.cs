@@ -1,9 +1,11 @@
 using WebSite;
+using WebSite.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<PortfolioDBContext>();
 
 var app = builder.Build();
 
