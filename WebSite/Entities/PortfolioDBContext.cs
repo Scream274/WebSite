@@ -7,6 +7,7 @@ namespace WebSite.Entities
     {
         public DbSet<Option> Options { get; set; }
         public DbSet<Navigate> Navigations { get; set; }
+        public DbSet<Work> Works { get; set; }
 
         public PortfolioDBContext(DbContextOptions options) : base(options)
         {
@@ -46,8 +47,91 @@ namespace WebSite.Entities
                 new Navigate(){ Id = 7, Title = "Blog", Href= "/blog", Order = 7 }
             };
 
+            Work[] works = new Work[]
+            {
+                new Work()
+                {
+                    Id = 1,
+                    Title = "Boxed Water",
+                    ImgSrc = "/assets/img/img_1.jpg",
+                    BigImgSrc = "/assets/img/img_1_big.jpg",
+                    ImgAlt = "Boxed Water",
+                    Category = "Web",
+                    Description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore.",
+                    Slug = "Boxed_Water",
+                    Keywords = "Design, HTML5/CSS3, CMS, Logo",
+                    Content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores illo, id recusandae molestias\r\n                    illum unde pariatur, enim tempora."
+                },
+                new Work()
+                {
+                    Id = 2,
+                    Title = "Cocooil",
+                    ImgSrc = "/assets/img/img_3.jpg",
+                    BigImgSrc = "assets/img/img_3_big.jpg",
+                    ImgAlt = "Cocooil",
+                    Category = "Branding",
+                    Description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore.",
+                    Slug = "Cocooil",
+                    Keywords = "Design, HTML5/CSS3, CMS, Logo",
+                    Content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores illo, id recusandae molestias\r\n                    illum unde pariatur, enim tempora."
+                },
+                new Work()
+                {
+                    Id = 3,
+                    Title = "Build Indoo",
+                    ImgSrc = "/assets/img/img_2.jpg",
+                    BigImgSrc = "assets/img/img_2_big.jpg",
+                    ImgAlt = "Build Indoo",
+                    Category = "Photography",
+                    Description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore.",
+                    Slug = "Build_Indoo",
+                    Keywords = "Design, HTML5/CSS3, CMS, Logo",
+                    Content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores illo, id recusandae molestias\r\n                    illum unde pariatur, enim tempora."
+                },
+                new Work()
+                {
+                    Id = 4,
+                    Title = "Nike Shoe",
+                    ImgSrc = "/assets/img/img_4.jpg",
+                    BigImgSrc = "assets/img/img_4_big.jpg",
+                    ImgAlt = "Nike Shoe",
+                    Category = "Design",
+                    Description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore.",
+                    Slug = "Nike_Shoe",
+                    Keywords = "Design, HTML5/CSS3, CMS, Logo",
+                    Content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores illo, id recusandae molestias\r\n                    illum unde pariatur, enim tempora."
+                },
+                new Work()
+                {
+                    Id = 5,
+                    Title = "Kitchen Sink",
+                    ImgSrc = "/assets/img/img_5.jpg",
+                    BigImgSrc = "assets/img/img_5_big.jpg",
+                    ImgAlt = "Kitchen Sink",
+                    Category = "Design",
+                    Description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore.",
+                    Slug = "Kitchen_Sink",
+                    Keywords = "Design, HTML5/CSS3, CMS, Logo",
+                    Content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores illo, id recusandae molestias\r\n                    illum unde pariatur, enim tempora."
+                },
+                new Work()
+                {
+                    Id = 6,
+                    Title = "Amazon",
+                    ImgSrc = "/assets/img/img_6.jpg",
+                    BigImgSrc = "assets/img/img_6_big.jpg",
+                    ImgAlt = "Amazon",
+                    Category = "Branding",
+                    Description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore.",
+                    Slug = "Amazon",
+                    Keywords = "Design, HTML5/CSS3, CMS, Logo",
+                    Content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores illo, id recusandae molestias\r\n                    illum unde pariatur, enim tempora."
+                }
+            };
+
             modelBuilder.Entity<Option>().HasData(options);
             modelBuilder.Entity<Navigate>().HasData(navigates);
+            modelBuilder.Entity<Work>().HasData(works);
         }
     }
 }

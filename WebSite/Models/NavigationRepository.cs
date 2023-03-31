@@ -11,9 +11,9 @@ namespace WebSite.Models
             this.portfolioDB = portfolioDB;
         }
 
-        public IEnumerable<Navigate> GetNavigate()
+        public IQueryable<Navigate> GetNavigate()
         {
-            return portfolioDB.Navigations.OrderBy(n => n.Order).ToList();
+            return portfolioDB.Navigations.OrderBy(n => n.Order);
         }
     }
 }
