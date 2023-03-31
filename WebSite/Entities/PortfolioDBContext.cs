@@ -6,7 +6,7 @@ namespace WebSite.Entities
     public class PortfolioDBContext : DbContext
     {
         public DbSet<Option> Options { get; set; }
-
+        public DbSet<Navigate> Navigations { get; set; }
 
         public PortfolioDBContext(DbContextOptions options) : base(options)
         {
@@ -35,7 +35,19 @@ namespace WebSite.Entities
                 new Option(){Id = 8, Name = "Linkedin", Value="https://www.linkedin.com/", Key = "bi bi-linkedin", Relation = "social_links", Order = 4},
             };
 
+            Navigate[] navigates = new Navigate[]
+            {
+                new Navigate(){ Id = 1, Title = "Home", Href= "/", Order = 1 },
+                new Navigate(){ Id = 2, Title = "About", Href= "/about", Order = 2 },
+                new Navigate(){ Id = 3, Title = "Me", Href= "about/me", Order = 3 },
+                new Navigate(){ Id = 4, Title = "Services", Href= "about/services", Order = 4 },
+                new Navigate(){ Id = 5, Title = "Works", Href= "about/works", Order = 5 },
+                new Navigate(){ Id = 6, Title = "Contact", Href= "about/contactUs", Order = 6 },
+                new Navigate(){ Id = 7, Title = "Blog", Href= "/blog", Order = 7 }
+            };
+
             modelBuilder.Entity<Option>().HasData(options);
+            modelBuilder.Entity<Navigate>().HasData(navigates);
         }
     }
 }

@@ -1,0 +1,17 @@
+﻿@using WebSite.Entities;
+
+<div class="col-md-2">
+    <ul class="custom-menu">
+        @foreach (Navigate nav in Model)
+        {
+            if (nav.Order == 1)
+            {
+                <li class="active"><a href="@nav.Href">@nav.Title</a></li>
+            }
+            else
+            {
+                <li><a href="@nav.Href">@nav.Title</a></li>
+            }
+        }
+    </ul>
+</div>
