@@ -183,4 +183,8 @@
     </Content>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\assets\img\avatars\" />
+  </ItemGroup>
+
 </Project>

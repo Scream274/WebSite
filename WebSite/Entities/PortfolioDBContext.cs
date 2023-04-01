@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Reflection.Emit;
 
 namespace WebSite.Entities
 {
@@ -8,6 +9,11 @@ namespace WebSite.Entities
         public DbSet<Option> Options { get; set; }
         public DbSet<Navigate> Navigations { get; set; }
         public DbSet<Work> Works { get; set; }
+        public DbSet<Tag> Tags { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Post> Posts { get; set; }
+        public DbSet<PostTag> PostTags { get; set; }
+        public DbSet<Comment> Comments { get; set; }
 
         public PortfolioDBContext(DbContextOptions options) : base(options)
         {
@@ -23,6 +29,12 @@ namespace WebSite.Entities
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Option>().HasIndex(p => p.Name).IsUnique();
+            modelBuilder.Entity<Work>().HasIndex(w => w.Slug).IsUnique();
+            modelBuilder.Entity<Post>().HasIndex(p => p.Slug).IsUnique();
+            modelBuilder.Entity<Tag>().HasIndex(t => t.Name).IsUnique();
+            modelBuilder.Entity<Category>().HasIndex(c => c.Slug).IsUnique();
 
             Option[] options = new Option[]
             {
@@ -40,10 +52,10 @@ namespace WebSite.Entities
             {
                 new Navigate(){ Id = 1, Title = "Home", Href= "/", Order = 1 },
                 new Navigate(){ Id = 2, Title = "About", Href= "/about", Order = 2 },
-                new Navigate(){ Id = 3, Title = "Me", Href= "about/me", Order = 3 },
-                new Navigate(){ Id = 4, Title = "Services", Href= "about/services", Order = 4 },
-                new Navigate(){ Id = 5, Title = "Works", Href= "about/works", Order = 5 },
-                new Navigate(){ Id = 6, Title = "Contact", Href= "about/contactUs", Order = 6 },
+                new Navigate(){ Id = 3, Title = "Me", Href= "/about/me", Order = 3 },
+                new Navigate(){ Id = 4, Title = "Services", Href= "/services", Order = 4 },
+                new Navigate(){ Id = 5, Title = "Works", Href= "/work", Order = 5 },
+                new Navigate(){ Id = 6, Title = "Contact", Href= "/about/contactUs", Order = 6 },
                 new Navigate(){ Id = 7, Title = "Blog", Href= "/blog", Order = 7 }
             };
 
@@ -67,7 +79,7 @@ namespace WebSite.Entities
                     Id = 2,
                     Title = "Cocooil",
                     ImgSrc = "/assets/img/img_3.jpg",
-                    BigImgSrc = "assets/img/img_3_big.jpg",
+                    BigImgSrc = "/assets/img/img_1_big.jpg",
                     ImgAlt = "Cocooil",
                     Category = "Branding",
                     Description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore.",
@@ -80,7 +92,7 @@ namespace WebSite.Entities
                     Id = 3,
                     Title = "Build Indoo",
                     ImgSrc = "/assets/img/img_2.jpg",
-                    BigImgSrc = "assets/img/img_2_big.jpg",
+                    BigImgSrc = "/assets/img/img_1_big.jpg",
                     ImgAlt = "Build Indoo",
                     Category = "Photography",
                     Description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore.",
@@ -93,7 +105,7 @@ namespace WebSite.Entities
                     Id = 4,
                     Title = "Nike Shoe",
                     ImgSrc = "/assets/img/img_4.jpg",
-                    BigImgSrc = "assets/img/img_4_big.jpg",
+                    BigImgSrc = "/assets/img/img_1_big.jpg",
                     ImgAlt = "Nike Shoe",
                     Category = "Design",
                     Description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore.",
@@ -106,7 +118,7 @@ namespace WebSite.Entities
                     Id = 5,
                     Title = "Kitchen Sink",
                     ImgSrc = "/assets/img/img_5.jpg",
-                    BigImgSrc = "assets/img/img_5_big.jpg",
+                    BigImgSrc = "/assets/img/img_1_big.jpg",
                     ImgAlt = "Kitchen Sink",
                     Category = "Design",
                     Description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore.",
@@ -119,7 +131,7 @@ namespace WebSite.Entities
                     Id = 6,
                     Title = "Amazon",
                     ImgSrc = "/assets/img/img_6.jpg",
-                    BigImgSrc = "assets/img/img_6_big.jpg",
+                    BigImgSrc = "/assets/img/img_1_big.jpg",
                     ImgAlt = "Amazon",
                     Category = "Branding",
                     Description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore.",
