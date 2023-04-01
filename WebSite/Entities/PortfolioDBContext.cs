@@ -59,6 +59,54 @@ namespace WebSite.Entities
                 new Navigate(){ Id = 7, Title = "Blog", Href= "/blog", Order = 7 }
             };
 
+            Category[] categories = new Category[]
+            {
+                new Category(){Id = 1, Name = "Web", Description = "All about web.", Slug = "Web", Order = 1},
+                new Category(){Id = 2, Name = "Design", Description = "All about Design.", Slug = "Design", Order = 2},
+                new Category(){Id = 3, Name = "Branding", Description = "All about Branding.", Slug = "Branding", Order = 3},
+                new Category(){Id = 4, Name = "Photography", Description = "All about Photography.", Slug = "Photography", Order = 4}
+            };
+
+            modelBuilder.Entity<Category>().HasData(categories);
+
+            Tag[] tags = new Tag[]
+            {
+                new Tag(){Id = 1, Name = "Web"},
+                new Tag(){Id = 2, Name = "Design"},
+                new Tag(){Id = 3, Name = "Branding"},
+                new Tag(){Id = 4, Name = "Photography"}
+            };
+
+            modelBuilder.Entity<Tag>().HasData(tags);
+
+            Post[] posts = new Post[]
+            {
+                new Post(){Id = 1, Title = "Post title - Web", Slug = "Web", Description = "Post about Web", ImgSrc = "/assets/img/posts/post.jpg", ImgAlt="Post image", Content = "Post content here...", AuthorImgSrc = "/assets/img/avatars/author.jpg" , Author = "Anatolii", CategoryId = 1},
+                new Post(){Id = 2, Title = "Post title - Design", Slug = "Design", Description = "Post about Design", ImgSrc = "/assets/img/posts/post.jpg", ImgAlt="Post image", Content = "Post content here...", AuthorImgSrc = "/assets/img/avatars/author.jpg" , Author = "Anatolii", CategoryId = 2},
+                new Post(){Id = 3, Title = "Post title - Branding", Slug = "Branding", Description = "Post about Branding", ImgSrc = "/assets/img/posts/post.jpg", ImgAlt="Post image", Content = "Post content here...", AuthorImgSrc = "/assets/img/avatars/author.jpg" , Author = "Anatolii", CategoryId = 3},
+                new Post(){Id = 4, Title = "Post title - Photography", Slug = "Photography", Description = "Post about Photography", ImgSrc = "/assets/img/posts/post.jpg", ImgAlt="Post image", Content = "Post content here...", AuthorImgSrc = "/assets/img/avatars/author.jpg" , Author = "Anatolii", CategoryId = 4},
+            };
+
+            modelBuilder.Entity<Post>().HasData(posts);
+
+            Comment[] comments = new Comment[]
+            {
+                new Comment(){Id = 1, Text = "Comment 1", Login = "Simple Login", Email = "login@gmail.com", PostId = 1},
+                new Comment(){Id = 2, Text = "Test Comment 2", Login = "Super Login", Email = "super@gmail.com", PostId = 1},
+                new Comment(){Id = 3, Text = "Sample comment 3", Login = "Almost Login", Email = "almost@gmail.com", PostId = 1},
+                new Comment(){Id = 4, Text = "Comment just comment 4", Login = "Im Login", Email = "before@gmail.com", PostId = 1}
+            };
+            modelBuilder.Entity<Comment>().HasData(comments);
+
+            PostTag[] postTags = new PostTag[]
+            {
+                new PostTag(){Id = 1, PostId = 1, TagId = 1},
+                new PostTag(){Id = 2, PostId = 2, TagId = 2},
+                new PostTag(){Id = 3, PostId = 3, TagId = 3},
+                new PostTag(){Id = 4, PostId = 4, TagId = 4}
+            };
+            modelBuilder.Entity<PostTag>().HasData(postTags);
+
             Work[] works = new Work[]
             {
                 new Work()

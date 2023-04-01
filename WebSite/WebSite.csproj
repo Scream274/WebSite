@@ -185,6 +185,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\assets\img\avatars\" />
+    <Folder Include="wwwroot\assets\img\posts\" />
   </ItemGroup>
 
 </Project>
