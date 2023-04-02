@@ -1,0 +1,105 @@
+﻿@using WebSite.Entities;
+@using WebSite.ViewModels;
+
+<head>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/blog/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS Files -->
+    <link href="~/blog/assets/css/variables.css" rel="stylesheet">
+    <link href="~/blog/assets/css/main.css" rel="stylesheet">
+</head>
+
+<main id="main">
+    <section>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-9" data-aos="fade-up">
+                    <h3 class="category-title">Category: Business</h3>
+
+                    @foreach (Post post in Model.Posts)
+                    {
+                        <div class="d-md-flex post-entry-2 half">
+                            <a href="single-post.html" class="me-4 thumbnail">
+                                <img src="@post.ImgSrc" alt="@post.ImgAlt" class="img-fluid">
+                            </a>
+                            <div>
+                                <div class="post-meta"><span class="date">Culture</span> <span class="mx-1">&bullet;</span> <span>@post.CreatedDate</span></div>
+                                <h3><a href="single-post.html">@post.Title</a></h3>
+                                <p>@post.Description</p>
+                                <div class="d-flex align-items-center author">
+                                    <div class="photo"><img src="@post.AuthorImgSrc" alt="" class="img-fluid"></div>
+                                    <div class="name">
+                                        <h3 class="m-0 p-0">@post.Author</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                    <div class="text-start py-4">
+                        <div class="custom-pagination">
+                            <a href="#" class="prev">Prevous</a>
+                            <a href="#" class="active">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#" class="next">Next</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <!-- ======= Sidebar ======= -->
+                    <div class="aside-block">
+                        <h3 class="aside-title">Video</h3>
+                        <div class="video-post">
+                            <a href="https://www.youtube.com/watch?v=AiFfDjmd0jU" class="glightbox link-video">
+                                <span class="bi-play-fill"></span>
+                                <img src="assets/img/post-landscape-5.jpg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                    </div><!-- End Video -->
+
+                    <div class="aside-block">
+                        <h3 class="aside-title">Categories</h3>
+                        <ul class="aside-links list-unstyled">
+                            <li><a href="category.html"><i class="bi bi-chevron-right"></i> Business</a></li>
+                            <li><a href="category.html"><i class="bi bi-chevron-right"></i> Culture</a></li>
+                            <li><a href="category.html"><i class="bi bi-chevron-right"></i> Sport</a></li>
+                            <li><a href="category.html"><i class="bi bi-chevron-right"></i> Food</a></li>
+                            <li><a href="category.html"><i class="bi bi-chevron-right"></i> Politics</a></li>
+                            <li><a href="category.html"><i class="bi bi-chevron-right"></i> Celebrity</a></li>
+                            <li><a href="category.html"><i class="bi bi-chevron-right"></i> Startups</a></li>
+                            <li><a href="category.html"><i class="bi bi-chevron-right"></i> Travel</a></li>
+                        </ul>
+                    </div><!-- End Categories -->
+                    <div class="aside-block">
+                        <h3 class="aside-title">Tags</h3>
+                        <ul class="aside-tags list-unstyled">
+                            <li><a href="category.html">Business</a></li>
+                            <li><a href="category.html">Culture</a></li>
+                            <li><a href="category.html">Sport</a></li>
+                            <li><a href="category.html">Food</a></li>
+                            <li><a href="category.html">Politics</a></li>
+                            <li><a href="category.html">Celebrity</a></li>
+                            <li><a href="category.html">Startups</a></li>
+                            <li><a href="category.html">Travel</a></li>
+                        </ul>
+                    </div><!-- End Tags -->
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main><!-- End #main -->
+<!-- Vendor JS Files -->
