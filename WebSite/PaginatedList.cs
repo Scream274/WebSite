@@ -34,10 +34,12 @@ namespace WebSite
         {
             get { return (CurrentPageIndex + 1 < CountPages); }
         }
+
         public bool HasPreviousPage
         {
             get { return (CurrentPageIndex - 1 >= 0); }
         }
+
         public PaginatedList(IQueryable<T> data, int pageIndex, int countPerPage)
         {
             _countPosts = data.Count();

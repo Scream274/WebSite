@@ -15,5 +15,6 @@ namespace WebSite.Models
         {
             return _dbContext.Categories;
         }
+
     }
 }

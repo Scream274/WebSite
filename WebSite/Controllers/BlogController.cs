@@ -26,27 +26,49 @@ namespace WebSite.Controllers
         {
             PostsViewModel postViewModel = new PostsViewModel();
             postViewModel.Tags = _tagRepository.GetAllTags();
-            postViewModel.Categories = _categoryRepository.GetAllCategories().ToList(); ;
+            postViewModel.Categories = _categoryRepository.GetAllCategories().ToList();
 
             if (!string.IsNullOrEmpty(categoryId))
             {
                 //с фильтром по категории
+                postViewModel.CategoryName = "Category: " + categoryId;
                 postViewModel.CategorySlug = categoryId;
                 postViewModel.Posts = new PaginatedList<Post>(_postsRepository.GetPostsByCategory(categoryId), page, countPerPage);
             }
             else if (!string.IsNullOrEmpty(tagId))
             {
                 //с фильтром по тегам
-                postViewModel.Posts = new PaginatedList<Post>(_postsRepository.GetPostsByTags(tagId), page, countPerPage);
+                postViewModel.CategoryName = "Tag: " + tagId;
+
+                postViewModel.Posts = new PaginatedList<Post> (_postsRepository.GetPostsByTags(tagId), page, countPerPage);
                 postViewModel.TagSlug = tagId;
             }
             else
             {
                 //без фильтра по категории
+                postViewModel.CategoryName = "Category: All posts";
                 postViewModel.Posts = new PaginatedList<Post>(_postsRepository.GetPosts(), page, countPerPage);
             }
 
             return View(postViewModel);
+        }
+
+        [HttpGet]
+        public IActionResult OnePost(string Id)
+        {
+            if (!string.IsNullOrEmpty(Id))
+            {
+                PostsViewModel viewModel = new PostsViewModel();
+                viewModel.Post = _postsRepository.GetOnePostBySlug(Id);
+                if (viewModel.Post != null)
+                {
+                    viewModel.PostTags = _tagRepository.GetTagsByPostId(viewModel.Post.Id);
+                    viewModel.Tags = _tagRepository.GetAllTags();
+                    viewModel.Categories = _categoryRepository.GetAllCategories().ToList();
+                    return View("OnePost", viewModel);
+                }
+            }
+            return RedirectToAction("allPosts", "Blog");
         }
     }
 }
