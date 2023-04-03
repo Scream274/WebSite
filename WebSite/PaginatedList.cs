@@ -22,7 +22,7 @@ namespace WebSite
             get { return _countPosts; }
         }
         //количество постов на странице
-        public int CountPerPage { get; set; } = 3;
+        public int CountPerPage { get; set; } = 5;
         
         //количество страниц
         public int CountPages

@@ -22,7 +22,7 @@ namespace WebSite.Controllers
         }
 
         [HttpGet]
-        public IActionResult AllPosts(int page = 0, int countPerPage = 3, string categoryId = null, string tagId = null)
+        public IActionResult AllPosts(int page = 0, int countPerPage = 5, string categoryId = null, string tagId = null)
         {
             PostsViewModel postViewModel = new PostsViewModel();
             postViewModel.Tags = _tagRepository.GetAllTags();
