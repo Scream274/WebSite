@@ -14,9 +14,9 @@ namespace WebSite.Entities
         public string? Email { get; set; }
 
         [DefaultValue("/assets/img/avatars/avatar.png")]
-        public string? Avatar { get; set; }
+        public string? Avatar { get; set; } = "/assets/img/avatars/avatar.jpg";
 
-        public bool IsValid { get; set; } = false;
+        public bool IsValid { get; set; } = true;
 
         public DateTime DateOfCreation { get; set; } = DateTime.Now;
 

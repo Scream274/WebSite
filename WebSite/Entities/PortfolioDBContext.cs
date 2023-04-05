@@ -17,8 +17,8 @@ namespace WebSite.Entities
 
         public PortfolioDBContext(DbContextOptions options) : base(options)
         {
-            //Database.EnsureDeleted();
-            //Database.EnsureCreated();
+            Database.EnsureDeleted();
+            Database.EnsureCreated();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -61,7 +61,7 @@ namespace WebSite.Entities
 
             Category[] categories = new Category[]
             {
-                new Category(){Id = 1, Name = "Web", Description = "All about web.", Slug = "Web", Order = 1},
+                new Category(){Id = 1, Name = "Java", Description = "All about Java.", Slug = "Java", Order = 1},
                 new Category(){Id = 2, Name = "Design", Description = "All about Design.", Slug = "Design", Order = 2},
                 new Category(){Id = 3, Name = "Branding", Description = "All about Branding.", Slug = "Branding", Order = 3},
                 new Category(){Id = 4, Name = "Photography", Description = "All about Photography.", Slug = "Photography", Order = 4}
@@ -71,7 +71,7 @@ namespace WebSite.Entities
 
             Tag[] tags = new Tag[]
             {
-                new Tag(){Id = 1, Name = "Web"},
+                new Tag(){Id = 1, Name = "Java"},
                 new Tag(){Id = 2, Name = "Design"},
                 new Tag(){Id = 3, Name = "Branding"},
                 new Tag(){Id = 4, Name = "Photography"}
@@ -81,7 +81,18 @@ namespace WebSite.Entities
 
             Post[] posts = new Post[]
             {
-                new Post(){Id = 1, Title = "Post title - Web", Slug = "Web", Description = "Post about Web", ImgSrc = "/assets/img/posts/post.jpg", ImgAlt="Post image", Content = "Post content here...", AuthorImgSrc = "/assets/img/avatars/author.jpg" , Author = "Anatolii", CategoryId = 1},
+                new Post()
+                {
+                    Id = 1,
+                    Title = "History of Java",
+                    Slug = "Java",
+                    Description = "Java is the general purpose, true object oriented programming language and is highly suitable for modeling the real world and solving the real world problems.",
+                    ImgSrc = "/assets/img/posts/java.jpg",
+                    ImgAlt="Java image",
+                    Content = "The history of Java is very interesting. Java was originally designed for interactive television, but it was too advanced technology for the digital cable television industry at the time. The history of Java starts with the Green Team. Java team members (also known as Green Team), initiated this project to develop a language for digital devices such as set-top boxes, televisions, etc. However, it was best suited for internet programming. Later, Java technology was incorporated by Netscape.<br /><p>The principles for creating Java programming were \"Simple, Robust, Portable, Platform-independent, Secured, High Performance, Multithreaded, Architecture Neutral, Object-Oriented, Interpreted, and Dynamic\". <a href=\"java-tutorial\">Java</a> was developed by James Gosling, who is known as the father of Java, in 1995. James Gosling and his team members started the project in the early '90s.</p><p>Currently, Java is used in internet programming, mobile devices, games, e-business solutions, etc. Following are given significant points that describe the history of Java.</p>",
+                    AuthorImgSrc = "/assets/img/avatars/java-author.jpg" ,
+                    Author = "James Gosling",
+                    CategoryId = 1},
                 new Post(){Id = 2, Title = "Post title - Design", Slug = "Design", Description = "Post about Design", ImgSrc = "/assets/img/posts/post.jpg", ImgAlt="Post image", Content = "Post content here...", AuthorImgSrc = "/assets/img/avatars/author.jpg" , Author = "Anatolii", CategoryId = 2},
                 new Post(){Id = 3, Title = "Post title - Branding", Slug = "Branding", Description = "Post about Branding", ImgSrc = "/assets/img/posts/post.jpg", ImgAlt="Post image", Content = "Post content here...", AuthorImgSrc = "/assets/img/avatars/author.jpg" , Author = "Anatolii", CategoryId = 3},
                 new Post(){Id = 4, Title = "Post title - Photography", Slug = "Photography", Description = "Post about Photography", ImgSrc = "/assets/img/posts/post.jpg", ImgAlt="Post image", Content = "Post content here...", AuthorImgSrc = "/assets/img/avatars/author.jpg" , Author = "Anatolii", CategoryId = 4},
@@ -105,10 +116,13 @@ namespace WebSite.Entities
 
             Comment[] comments = new Comment[]
             {
-                new Comment(){Id = 1, Text = "Comment 1", Login = "Simple Login", Email = "login@gmail.com", PostId = 1},
+                new Comment(){Id = 1, Text = "Comment 1", Login = "Simple Login", Email = "login@gmail.com", PostId = 1, DateOfCreation = new DateTime(2023, 2, 10)},
+                new Comment(){Id = 7, Text = "Comment 112314", Login = "Simple Login", Email = "login@gmail.com", PostId = 1, DateOfCreation = new DateTime(2023, 2, 15)},
                 new Comment(){Id = 2, Text = "Test Comment 2", Login = "Super Login", Email = "super@gmail.com", PostId = 1},
                 new Comment(){Id = 3, Text = "Sample comment 3", Login = "Almost Login", Email = "almost@gmail.com", PostId = 1},
-                new Comment(){Id = 4, Text = "Comment just comment 4", Login = "Im Login", Email = "before@gmail.com", PostId = 1}
+                new Comment(){Id = 4, Text = "Comment just comment 4", Login = "Im Login", Email = "before@gmail.com", PostId = 1, ParentId = 1},
+                new Comment(){Id = 5, Text = "Comment by comment 1", Login = "Test Login", Email = "test@gmail.com", PostId = 1, ParentId = 1},
+                new Comment(){Id = 6, Text = "Comment by comment 2", Login = "Test Login", Email = "test@gmail.com", PostId = 1, ParentId = 2}
             };
             modelBuilder.Entity<Comment>().HasData(comments);
 

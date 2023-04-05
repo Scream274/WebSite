@@ -649,6 +649,8 @@ section {
 # Comments
 --------------------------------------------------------------*/
 .comment {
+    margin-top: 18px;
+
   /* Font not working in <textarea> for this version of bs */
 }
 
@@ -671,6 +673,8 @@ section {
   display: block;
   -o-object-fit: cover;
   object-fit: cover;
+  width: 46px;
+  height: 46px;
 }
 
 .comment .avatar-initials {
@@ -702,6 +706,8 @@ section {
   background-color: rgba(var(--color-black-rgba), 0.1);
   border-radius: 50%;
 }
+
+
 
 .comment .avatar-group {
   display: inline-flex;
@@ -820,6 +826,12 @@ section {
     border-left: 1px solid rgba(var(--color-secondary-rgb), 0.2);
     border-right: 1px solid rgba(var(--color-secondary-rgb), 0.2);
   }
+}
+
+@media (min-width: 576px)  {
+    .ms-sm-3 {
+        margin-left: 2rem !important;
+    }
 }
 
 .contact .php-email-form {

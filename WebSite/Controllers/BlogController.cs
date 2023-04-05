@@ -65,6 +65,7 @@ namespace WebSite.Controllers
                     viewModel.PostTags = _tagRepository.GetTagsByPostId(viewModel.Post.Id);
                     viewModel.Tags = _tagRepository.GetAllTags();
                     viewModel.Categories = _categoryRepository.GetAllCategories().ToList();
+                    viewModel.Comments = _commentsRepository.GetCommentsThree(viewModel.Post.Id);
                     return View("OnePost", viewModel);
                 }
             }

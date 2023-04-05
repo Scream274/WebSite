@@ -1,5 +1,6 @@
 ﻿@using WebSite.Entities;
 @using WebSite.ViewModels;
+@using WebSite.Services;
 
 <head>
 
@@ -17,9 +18,9 @@
 </head>
 
 <main id="main">
-
     <section class="single-post-content">
         <div class="container">
+            <p class="d-none post-Id">@Model.Post.Id</p>
             <div class="row">
                 <div class="col-md-9 post-content" data-aos="fade-up">
 
@@ -30,82 +31,70 @@
                         <figure class="my-4">
                             <img src="@Model.Post.ImgSrc" alt="@Model.Post.ImgAlt" class="img-fluid">
                         </figure>
-                        <p><span class="firstcharacter">@Model.Post.Content.Substring(0,1)</span>@Model.Post.Content.Remove(0,1)</p>
+
+                        @{
+                            string content = Model.Post.Content;
+                            int firstParagraphEndIndex = content.IndexOf("</p>") + 4;
+                            string firstParagraph = content.Substring(0, firstParagraphEndIndex);
+                            string remainingContent = content.Remove(0, firstParagraphEndIndex);
+                        }
+                        <div><span class="firstcharacter">@Model.Post.Content.Substring(0,1)</span>@Html.Raw($"<p>{firstParagraph.Remove(0,1)}</p>{remainingContent}")</div>
                         <br />
                     </div><!-- End Single Post Content -->
                     <!-- ======= Comments ======= -->
                     <div class="comments">
-                        <h5 class="comment-title py-4">2 Comments</h5>
-                        <div class="comment d-flex mb-4">
-                            <div class="flex-shrink-0">
-                                <div class="avatar avatar-sm rounded-circle">
-                                    <img class="avatar-img" src="assets/img/person-5.jpg" alt="" class="img-fluid">
-                                </div>
-                            </div>
-                            <div class="flex-grow-1 ms-2 ms-sm-3">
-                                <div class="comment-meta d-flex align-items-baseline">
-                                    <h6 class="me-2">Jordan Singer</h6>
-                                    <span class="text-muted">2d</span>
-                                </div>
-                                <div class="comment-body">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non minima ipsum at amet doloremque qui magni, placeat deserunt pariatur itaque laudantium impedit aliquam eligendi repellendus excepturi quibusdam nobis esse accusantium.
-                                </div>
+                        <h5 class="comment-title py-4">@HtmlService.CountAllComments(@Model.Comments) Comments</h5>
 
-                                <div class="comment-replies bg-light p-3 mt-3 rounded">
-                                    <h6 class="comment-replies-title mb-4 text-muted text-uppercase">2 replies</h6>
-
-                                    <div class="reply d-flex mb-4">
-                                        <div class="flex-shrink-0">
-                                            <div class="avatar avatar-sm rounded-circle">
-                                                <img class="avatar-img" src="assets/img/person-4.jpg" alt="" class="img-fluid">
-                                            </div>
-                                        </div>
-                                        <div class="flex-grow-1 ms-2 ms-sm-3">
-                                            <div class="reply-meta d-flex align-items-baseline">
-                                                <h6 class="mb-0 me-2">Brandon Smith</h6>
-                                                <span class="text-muted">2d</span>
-                                            </div>
-                                            <div class="reply-body">
-                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                            </div>
+                        @foreach (Comment comment in Model.Comments)
+                        {
+                            if (comment.ParentId == null)
+                            {
+                                <div class="comment d-flex">
+                                    <div class="flex-shrink-0">
+                                        <div class="avatar avatar-sm rounded-circle">
+                                            <img class="avatar-img" src="@comment.Avatar" alt="" class="img-fluid">
                                         </div>
                                     </div>
-                                    <div class="reply d-flex">
-                                        <div class="flex-shrink-0">
-                                            <div class="avatar avatar-sm rounded-circle">
-                                                <img class="avatar-img" src="assets/img/person-3.jpg" alt="" class="img-fluid">
-                                            </div>
+                                    <div class="flex-shrink-1 ms-2 ms-sm-3">
+                                        <div class="comment-meta d-flex">
+                                            <h6 class="me-2">@comment.Login</h6>
+                                            <span class="text-muted">@HtmlService.GetDaysSince(comment.DateOfCreation)</span>
                                         </div>
-                                        <div class="flex-grow-1 ms-2 ms-sm-3">
-                                            <div class="reply-meta d-flex align-items-baseline">
-                                                <h6 class="mb-0 me-2">James Parsons</h6>
-                                                <span class="text-muted">1d</span>
-                                            </div>
-                                            <div class="reply-body">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore sed eos sapiente, praesentium.
-                                            </div>
+                                        <div class="comment-body">
+                                            @comment.Text
                                         </div>
+                                        @if(@comment.Childs.Count > 0){
+                                        <div class="comment-replies bg-light p-3 mt-3 rounded">
+                                                <h6 class="comment-replies-title mb-4 text-muted text-uppercase">@comment.Childs.Count replies</h6>
+
+                                            @foreach (Comment reCom in comment.Childs)
+                                            {
+                                                <div class="reply d-flex mb-4">
+                                                    <div class="flex-shrink-0">
+                                                        <div class="avatar avatar-sm rounded-circle">
+                                                            <img class="avatar-img" src="@reCom.Avatar" alt="" class="img-fluid">
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-grow-1 ms-2 ms-sm-3">
+                                                        <div class="reply-meta d-flex align-items-baseline">
+                                                            <h6 class="mb-0 me-2">@reCom.Login</h6>
+                                                                <span class="text-muted">@HtmlService.GetDaysSince(reCom.DateOfCreation)</span>
+                                                            </div>
+                                                        <div class="reply-body">
+                                                            @reCom.Text
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            }
+                                        </div>
+                                        }
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="comment d-flex">
-                            <div class="flex-shrink-0">
-                                <div class="avatar avatar-sm rounded-circle">
-                                    <img class="avatar-img" src="assets/img/person-2.jpg" alt="" class="img-fluid">
-                                </div>
-                            </div>
-                            <div class="flex-shrink-1 ms-2 ms-sm-3">
-                                <div class="comment-meta d-flex">
-                                    <h6 class="me-2">Santiago Roberts</h6>
-                                    <span class="text-muted">4d</span>
-                                </div>
-                                <div class="comment-body">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto laborum in corrupti dolorum, quas delectus nobis porro accusantium molestias sequi.
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- End Comments -->
+                            }
+                        }
+                    </div>
+
+                    <!-- End Comments -->
                     <!-- ======= Comments Form ======= -->
                     <div class="row justify-content-center mt-5">
 
@@ -130,7 +119,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div><!-- End Comments Form -->
+                    </div>
+
+                    <!-- End Comments Form -->
 
                 </div>
                 <div class="col-md-3">
@@ -167,4 +158,7 @@
             </div>
         </div>
     </section>
-</main><!-- End #main -->
+</main>
+
+<!-- End #main -->
+@*<script src="~/assets/js/comment.js"></script>*@

@@ -82,3 +82,4 @@ C:\Users\Anatolii\source\repos\WebSite\WebSite\bin\Debug\net6.0\runtimes\win\lib
 C:\Users\Anatolii\source\repos\WebSite\WebSite\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\Anatolii\source\repos\WebSite\WebSite\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\Anatolii\source\repos\WebSite\WebSite\obj\Debug\net6.0\WebSite.csproj.CopyComplete
+C:\Users\Anatolii\source\repos\WebSite\WebSite\bin\Debug\net6.0\Newtonsoft.Json.dll

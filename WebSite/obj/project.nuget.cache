@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "e1xUG6TSgCCLKxF1Kzw2bNc4DdKCyCiOAUCa3yxOt1ecYKETjskuwJ0Nh+V/dY8laJ13IkhQmdrg2l7DAgGrCQ==",
+  "dgSpecHash": "pYR0jGc3ucLxyQ/6juDNDOqXgBsZUfTd2s2VU5n+3GBvQQFPKZHBQAnxgzBUm6p+4dKg1Rxq7V4lONggg5Jq4g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Anatolii\\source\\repos\\WebSite\\WebSite\\WebSite.csproj",
   "expectedPackageFiles": [
@@ -42,6 +42,7 @@
     "C:\\Users\\Anatolii\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\Anatolii\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\Anatolii\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\Anatolii\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Anatolii\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\Anatolii\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\Anatolii\\.nuget\\packages\\system.configuration.configurationmanager\\5.0.0\\system.configuration.configurationmanager.5.0.0.nupkg.sha512",
