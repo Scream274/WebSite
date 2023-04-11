@@ -9,7 +9,7 @@ namespace WebSite.Controllers
     public class BlogController : Controller
     {
         private static PortfolioDBContext _dBContext = new PortfolioDBContext(new DbContextOptions<PortfolioDBContext>());
-        
+
         private PostsRepository _postsRepository = new PostsRepository(_dBContext);
         private CategoryRepository _categoryRepository = new CategoryRepository(_dBContext);
         private TagsRepository _tagRepository = new TagsRepository(_dBContext);
@@ -40,7 +40,7 @@ namespace WebSite.Controllers
                 //с фильтром по тегам
                 postViewModel.CategoryName = "Tag: " + tagId;
 
-                postViewModel.Posts = new PaginatedList<Post> (_postsRepository.GetPostsByTags(tagId), page, countPerPage);
+                postViewModel.Posts = new PaginatedList<Post>(_postsRepository.GetPostsByTags(tagId), page, countPerPage);
                 postViewModel.TagSlug = tagId;
             }
             else
@@ -66,10 +66,23 @@ namespace WebSite.Controllers
                     viewModel.Tags = _tagRepository.GetAllTags();
                     viewModel.Categories = _categoryRepository.GetAllCategories().ToList();
                     viewModel.Comments = _commentsRepository.GetCommentsThree(viewModel.Post.Id);
+                    viewModel.Comment = new Comment();
                     return View("OnePost", viewModel);
                 }
             }
             return RedirectToAction("allPosts", "Blog");
+        }
+
+        [HttpPost]
+        public IActionResult PostComment(Comment comment)
+        {
+            string postSlug = _postsRepository.GetOnePostById(comment.PostId.ToString()).Slug;
+
+            comment.DateOfCreation = DateTime.Now;
+            _commentsRepository.AddComment(comment);
+            TempData["Message"] = "Your comment has been added successfully!";
+
+            return RedirectToAction("OnePost", new { id = postSlug });
         }
     }
 }

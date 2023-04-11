@@ -35,5 +35,10 @@ namespace WebSite.Models
         {
             return _dbContext.Posts.FirstOrDefault(p => p.Slug.ToUpper().Equals(slug.ToUpper()) && p.PostStatus == Status.CRERATED);
         }
+        
+        internal Post GetOnePostById(string id)
+        {
+            return _dbContext.Posts.FirstOrDefault(p => p.Id.ToString().Equals(id) && p.PostStatus == Status.CRERATED);
+        }
     }
 }
