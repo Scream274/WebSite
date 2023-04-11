@@ -17,5 +17,6 @@ namespace WebSite.ViewModels
         public string CategorySlug { get; set; } = null;
         public string TagSlug { get; set; } = null;
         public string CategoryName { get; set; } = "All posts";
+        public Comment Comment { get; set; }
     }
 }

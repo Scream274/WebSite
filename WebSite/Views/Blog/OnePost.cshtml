@@ -1,8 +1,10 @@
 ﻿@using WebSite.Entities;
 @using WebSite.ViewModels;
 @using WebSite.Services;
+@model WebSite.ViewModels.PostsViewModel;
 
 <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -63,6 +65,10 @@
                                         <div class="comment-body">
                                             @comment.Text
                                         </div>
+                                        <div class="pad-ver">
+                                            <p class="d-none">@comment.Id</p>
+                                            <a href="#form" class="btn btn-sm btn-default btn-hover-primary reply_btn" data-parentid="@comment.Id">Reply</a>
+                                        </div>
                                         @if(@comment.Childs.Count > 0){
                                         <div class="comment-replies bg-light p-3 mt-3 rounded">
                                                 <h6 class="comment-replies-title mb-4 text-muted text-uppercase">@comment.Childs.Count replies</h6>
@@ -96,30 +102,39 @@
 
                     <!-- End Comments -->
                     <!-- ======= Comments Form ======= -->
-                    <div class="row justify-content-center mt-5">
 
-                        <div class="col-lg-12">
-                            <h5 class="comment-title">Leave a Comment</h5>
-                            <div class="row">
-                                <div class="col-lg-6 mb-3">
-                                    <label for="comment-name">Name</label>
-                                    <input type="text" class="form-control" id="comment-name" placeholder="Enter your name">
-                                </div>
-                                <div class="col-lg-6 mb-3">
-                                    <label for="comment-email">Email</label>
-                                    <input type="text" class="form-control" id="comment-email" placeholder="Enter your email">
-                                </div>
-                                <div class="col-12 mb-3">
-                                    <label for="comment-message">Message</label>
+                    <form asp-controller="Blog" asp-action="PostComment" id="commentForm" method="post">
+                        <div class="row justify-content-center mt-5">
+                            <div class="col-lg-12">
+                                <h5 class="comment-title">Leave a Comment</h5>
+                                <div class="row">
+                                    <div class="col-lg-6 mb-3">
+                                        <label asp-for="@Model.Comment.Login">Name</label>
+                                        <input type="hidden" asp-for="@Model.Post.Slug" value="@Model.Post.Slug" />
+                                        <input type="hidden" asp-for="@Model.Comment.PostId" value="@Model.Post.Id" />
+                                        <input type="hidden" asp-for="@Model.Comment.ParentId" id="ParentId" value="" />
 
-                                    <textarea class="form-control" id="comment-message" placeholder="Enter your name" cols="30" rows="10"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <input type="submit" class="btn btn-primary" value="Post comment">
+                                        <input asp-for="@Model.Comment.Login" class="form-control" id="comment-name" placeholder="Enter your name" />
+                                        <span asp-validation-for="@Model.Comment.Login" class="text-danger"></span>
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <label asp-for="@Model.Comment.Email">Email</label>
+                                        <input asp-for="@Model.Comment.Email" class="form-control" id="comment-email" placeholder="Enter your email" />
+                                        <span asp-validation-for="@Model.Comment.Email" class="text-danger"></span>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label asp-for="@Model.Comment.Text">Message</label>
+                                        <textarea asp-for="@Model.Comment.Text" class="form-control" id="comment-message" placeholder="Enter your message" cols="30" rows="10"></textarea>
+                                        <span asp-validation-for="@Model.Comment.Text" class="text-danger"></span>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary">Post comment</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </form>
+
 
                     <!-- End Comments Form -->
 
@@ -160,5 +175,20 @@
     </section>
 </main>
 
+
+<script>
+    $(document).ready(function () {
+        $(document).on('click', '.reply_btn', function (e) {
+            e.preventDefault();
+            var parentId = $(this).data('parentid');
+            console.log('Parent ID:', parentId);
+            $('#ParentId').val(parentId);
+
+            $('html, body').animate({
+                scrollTop: $('#commentForm').offset().top
+            }, 'slow');
+        });
+    });
+</script>
+
 <!-- End #main -->
-@*<script src="~/assets/js/comment.js"></script>*@

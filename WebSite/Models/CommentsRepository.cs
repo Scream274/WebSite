@@ -29,5 +29,11 @@ namespace WebSite.Models
             }
             return threeRoot.ToList();
         }
+
+        internal bool AddComment(Comment comment)
+        {
+            dBContext.Comments.Add(comment);
+            return dBContext.SaveChanges() == 1;
+        }
     }
 }
