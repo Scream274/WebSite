@@ -8,85 +8,85 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebSite
 build_property.RootNamespace = WebSite
-build_property.ProjectDir = C:\Users\Anatolii\source\repos\WebSite\WebSite\
+build_property.ProjectDir = C:\Users\Anatolii\source\repos\WebSite(2)\WebSite\WebSite\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Anatolii\source\repos\WebSite\WebSite
+build_property.MSBuildProjectDirectory = C:\Users\Anatolii\source\repos\WebSite(2)\WebSite\WebSite
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Anatolii/source/repos/WebSite/WebSite/Views/About/ContactUs.cshtml]
+[C:/Users/Anatolii/source/repos/WebSite(2)/WebSite/WebSite/Views/About/ContactUs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcQ29udGFjdFVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anatolii/source/repos/WebSite/WebSite/Views/About/Index.cshtml]
+[C:/Users/Anatolii/source/repos/WebSite(2)/WebSite/WebSite/Views/About/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anatolii/source/repos/WebSite/WebSite/Views/About/Thanks.cshtml]
+[C:/Users/Anatolii/source/repos/WebSite(2)/WebSite/WebSite/Views/About/Thanks.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcVGhhbmtzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anatolii/source/repos/WebSite/WebSite/Views/Blog/AllPosts.cshtml]
+[C:/Users/Anatolii/source/repos/WebSite(2)/WebSite/WebSite/Views/Blog/AllPosts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xBbGxQb3N0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anatolii/source/repos/WebSite/WebSite/Views/Blog/OnePost.cshtml]
+[C:/Users/Anatolii/source/repos/WebSite(2)/WebSite/WebSite/Views/Blog/OnePost.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xPbmVQb3N0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anatolii/source/repos/WebSite/WebSite/Views/Error/PageNotFound.cshtml]
+[C:/Users/Anatolii/source/repos/WebSite(2)/WebSite/WebSite/Views/Error/PageNotFound.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcUGFnZU5vdEZvdW5kLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anatolii/source/repos/WebSite/WebSite/Views/Home/Index.cshtml]
+[C:/Users/Anatolii/source/repos/WebSite(2)/WebSite/WebSite/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anatolii/source/repos/WebSite/WebSite/Views/Home/Privacy.cshtml]
+[C:/Users/Anatolii/source/repos/WebSite(2)/WebSite/WebSite/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anatolii/source/repos/WebSite/WebSite/Views/Shared/Components/Footer/Footer.cshtml]
+[C:/Users/Anatolii/source/repos/WebSite(2)/WebSite/WebSite/Views/Shared/Components/Footer/Footer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRm9vdGVyXEZvb3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anatolii/source/repos/WebSite/WebSite/Views/Shared/Components/Header/Header.cshtml]
+[C:/Users/Anatolii/source/repos/WebSite(2)/WebSite/WebSite/Views/Shared/Components/Header/Header.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcSGVhZGVyXEhlYWRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anatolii/source/repos/WebSite/WebSite/Views/Shared/Components/NavMenu/NavMenu.cshtml]
+[C:/Users/Anatolii/source/repos/WebSite(2)/WebSite/WebSite/Views/Shared/Components/NavMenu/NavMenu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTmF2TWVudVxOYXZNZW51LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anatolii/source/repos/WebSite/WebSite/Views/Shared/Components/SocialIcons/SocialIcons.cshtml]
+[C:/Users/Anatolii/source/repos/WebSite(2)/WebSite/WebSite/Views/Shared/Components/SocialIcons/SocialIcons.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU29jaWFsSWNvbnNcU29jaWFsSWNvbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anatolii/source/repos/WebSite/WebSite/Views/Shared/Error.cshtml]
+[C:/Users/Anatolii/source/repos/WebSite(2)/WebSite/WebSite/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anatolii/source/repos/WebSite/WebSite/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Anatolii/source/repos/WebSite(2)/WebSite/WebSite/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anatolii/source/repos/WebSite/WebSite/Views/Work/Index.cshtml]
+[C:/Users/Anatolii/source/repos/WebSite(2)/WebSite/WebSite/Views/Work/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anatolii/source/repos/WebSite/WebSite/Views/Work/SingleWork.cshtml]
+[C:/Users/Anatolii/source/repos/WebSite(2)/WebSite/WebSite/Views/Work/SingleWork.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya1xTaW5nbGVXb3JrLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anatolii/source/repos/WebSite/WebSite/Views/_ViewImports.cshtml]
+[C:/Users/Anatolii/source/repos/WebSite(2)/WebSite/WebSite/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anatolii/source/repos/WebSite/WebSite/Views/_ViewStart.cshtml]
+[C:/Users/Anatolii/source/repos/WebSite(2)/WebSite/WebSite/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Anatolii/source/repos/WebSite/WebSite/Views/Shared/_Layout.cshtml]
+[C:/Users/Anatolii/source/repos/WebSite(2)/WebSite/WebSite/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-jabq2d7uqs

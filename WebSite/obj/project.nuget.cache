@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pYR0jGc3ucLxyQ/6juDNDOqXgBsZUfTd2s2VU5n+3GBvQQFPKZHBQAnxgzBUm6p+4dKg1Rxq7V4lONggg5Jq4g==",
+  "dgSpecHash": "tnQTIvNgg+FZDnnD2AVSdG+/MQD90LnTaX4X8zXxugF9iCYJQDw8RsKMVzhbXRtZyDT514ddbV+CQQoua+/evw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Anatolii\\source\\repos\\WebSite\\WebSite\\WebSite.csproj",
+  "projectFilePath": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\WebSite.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Anatolii\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Anatolii\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
