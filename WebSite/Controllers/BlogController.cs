@@ -58,6 +58,8 @@ namespace WebSite.Controllers
         {
             if (!string.IsNullOrEmpty(Id))
             {
+                string message = TempData["Message"]?.ToString();
+
                 PostsViewModel viewModel = new PostsViewModel();
                 viewModel.Post = _postsRepository.GetOnePostBySlug(Id);
                 if (viewModel.Post != null)
@@ -67,6 +69,8 @@ namespace WebSite.Controllers
                     viewModel.Categories = _categoryRepository.GetAllCategories().ToList();
                     viewModel.Comments = _commentsRepository.GetCommentsThree(viewModel.Post.Id);
                     viewModel.Comment = new Comment();
+                    ViewData["Message"] = message;
+
                     return View("OnePost", viewModel);
                 }
             }
