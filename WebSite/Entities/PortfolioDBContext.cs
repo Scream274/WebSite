@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using FirstWebApplication;
+using Microsoft.EntityFrameworkCore;
 using System.Reflection.Emit;
 
 namespace WebSite.Entities
@@ -14,6 +15,9 @@ namespace WebSite.Entities
         public DbSet<Post> Posts { get; set; }
         public DbSet<PostTag> PostTags { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Role> Roles { get; set; }
+
 
         public PortfolioDBContext(DbContextOptions options) : base(options)
         {
@@ -216,6 +220,22 @@ namespace WebSite.Entities
                     Content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores illo, id recusandae molestias\r\n                    illum unde pariatur, enim tempora."
                 }
             };
+
+            Role[] roles =
+            {
+                new Role(){Id = 1, Name = "Admin"},
+                new Role(){Id = 2, Name = "Moderator"},
+                new Role(){Id = 3, Name = "Reader"}
+            };
+            modelBuilder.Entity<Role>().HasData(roles);
+
+            User[] users =
+            {
+                new User(){Id = 1, Login = "Admmin", Email = "admin@gmail.com", Password = SecurePasswordHasher.Hash("1234"), RoleId = 1, DateRegister = DateTime.Now},
+                new User(){Id = 2, Login = "Moderator", Email = "moderator@gmail.com", Password = SecurePasswordHasher.Hash("1234"), RoleId = 2, DateRegister = DateTime.Now},
+                new User(){Id = 3, Login = "Reader", Email = "reader@gmail.com", Password = SecurePasswordHasher.Hash("1234"), RoleId = 3, DateRegister = DateTime.Now},
+            };
+            modelBuilder.Entity<User>().HasData(users);
 
             modelBuilder.Entity<Option>().HasData(options);
             modelBuilder.Entity<Navigate>().HasData(navigates);
