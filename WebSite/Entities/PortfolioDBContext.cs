@@ -39,6 +39,7 @@ namespace WebSite.Entities
             modelBuilder.Entity<Post>().HasIndex(p => p.Slug).IsUnique();
             modelBuilder.Entity<Tag>().HasIndex(t => t.Name).IsUnique();
             modelBuilder.Entity<Category>().HasIndex(c => c.Slug).IsUnique();
+            modelBuilder.Entity<User>().HasIndex(u => u.Email).IsUnique();
 
             Option[] options = new Option[]
             {

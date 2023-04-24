@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "N9zViHfN/icWbEEX6amaumfHZ+0Kaxm/il55Md2u3tY=",
+  "Hash": "ChghY9ixuuN4lauCdxGUIJjWXoqd1XIZdgxE+N7GOSs=",
   "Source": "WebSite",
   "BasePath": "_content/WebSite",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\errorpage.css"
+    },
+    {
+      "Identity": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\assets\\css\\login.css",
+      "SourceId": "WebSite",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\",
+      "BasePath": "_content/WebSite",
+      "RelativePath": "assets/css/login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\css\\login.css"
     },
     {
       "Identity": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\assets\\img\\avatars\\author.jpg",

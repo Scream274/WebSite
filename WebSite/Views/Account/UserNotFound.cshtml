@@ -1,0 +1,10 @@
+﻿<head>
+    <link href="~/assets//css/login.css" rel="stylesheet">
+</head>
+<form asp-controller="Account" asp-action="CheckUser" method="post" class="login-form">
+    <div asp-validation-summary="All" class="alert-danger"></div>
+    <h1>Wrong authentification</h1>
+    <div class="center-btn">
+        <a asp-action="Login" asp-controller="Account" class="tr-btn">Try again</a>
+    </div>
+</form>

@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\assets\\css\\errorpage.css"
     },
     {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\assets\\css\\login.css",
+      "PackagePath": "staticwebassets\\assets\\css\\login.css"
+    },
+    {
       "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\assets\\img\\avatars\\author.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\avatars\\author.jpg"
     },
