@@ -88,6 +88,29 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Views\Shared\Components\AsideMenuAdm\AsideMenuAdm.cshtml" />
+    <None Include="Views\Shared\Components\FooterAdm\FooterAdm.cshtml" />
+    <None Include="Views\Shared\Components\NavBarAdm\NavBarAdm.cshtml" />
+    <None Include="wwwroot\admin\js\config.js" />
+    <None Include="wwwroot\admin\js\dashboards-analytics.js" />
+    <None Include="wwwroot\admin\js\extended-ui-perfect-scrollbar.js" />
+    <None Include="wwwroot\admin\js\form-basic-inputs.js" />
+    <None Include="wwwroot\admin\js\main.js" />
+    <None Include="wwwroot\admin\js\pages-account-settings-account.js" />
+    <None Include="wwwroot\admin\js\ui-modals.js" />
+    <None Include="wwwroot\admin\js\ui-popover.js" />
+    <None Include="wwwroot\admin\js\ui-toasts.js" />
+    <None Include="wwwroot\admin\vendor\fonts\boxicons\boxicons.svg" />
+    <None Include="wwwroot\admin\vendor\fonts\boxicons\boxicons.woff2" />
+    <None Include="wwwroot\admin\vendor\js\bootstrap.js" />
+    <None Include="wwwroot\admin\vendor\js\helpers.js" />
+    <None Include="wwwroot\admin\vendor\js\menu.js" />
+    <None Include="wwwroot\admin\vendor\libs\apex-charts\apexcharts.js" />
+    <None Include="wwwroot\admin\vendor\libs\highlight\highlight.js" />
+    <None Include="wwwroot\admin\vendor\libs\jquery\jquery.js" />
+    <None Include="wwwroot\admin\vendor\libs\masonry\masonry.js" />
+    <None Include="wwwroot\admin\vendor\libs\perfect-scrollbar\perfect-scrollbar.js" />
+    <None Include="wwwroot\admin\vendor\libs\popper\popper.js" />
     <None Include="wwwroot\assets\css\style.css" />
     <None Include="wwwroot\assets\img\apple-touch-icon.png" />
     <None Include="wwwroot\assets\img\favicon.png" />

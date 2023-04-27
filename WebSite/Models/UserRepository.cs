@@ -14,8 +14,18 @@ namespace WebSite.Models
         internal User? GetUserByEmail(string email)
         {
             User user = dBContext.Users.SingleOrDefault(u => u.Email == email);
-            user.Role = dBContext.Roles.SingleOrDefault(r => r.Id == user.RoleId);
+            if(user != null)
+            {
+                user.Role = dBContext.Roles.SingleOrDefault(r => r.Id == user.RoleId);
+            }
+            Console.WriteLine(user);
             return user;
+        }
+
+        internal void Add(User user)
+        {
+            dBContext.Users.Add(user);
+            dBContext.SaveChanges();
         }
     }
 }

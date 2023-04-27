@@ -16,7 +16,19 @@ namespace WebSite.Components
 
         public IViewComponentResult Invoke()
         {
-            return View("NavMenu", navigationRepository.GetNavigate());
+            List<Navigate> nav = (List<Navigate>)navigationRepository.GetNavigate().ToList();
+
+            if (HttpContext.User.Identity.IsAuthenticated)
+            {
+                nav.Add(new Navigate() { Title="Logout", Href = "/Account/Logout", Order = nav.Count - 1 });
+            }
+            else
+            {
+                nav.Add(new Navigate() { Title = "Login", Href = "/Account/Login", Order = nav.Count - 1 });
+                nav.Add(new Navigate() { Title = "Register", Href = "/Account/Register", Order = nav.Count - 1 });
+            }
+
+            return View("NavMenu", nav);
         }
     }
 }

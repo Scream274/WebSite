@@ -55,9 +55,22 @@ namespace WebSite.Controllers
         }
 
         [HttpPost]
-        public IActionResult RegisterUser(string login, string email, string password, string rePassword)
+        public IActionResult RegisterUser(User user)
         {
-            return View();
+            user.RoleId = 3;
+
+            if (userRepository.GetUserByEmail(user.Email) != null)
+            {
+                TempData["ErrorMessage"] = "This user is already registered";
+                return RedirectToAction("Register", "Account");
+            }
+
+            user.Password = SecurePasswordHasher.Hash(user.Password);
+            user.DateRegister = DateTime.Now;
+            userRepository.Add(user);
+            TempData["SuccessMessage"] = "You have successfully registered.";
+
+            return RedirectToAction("Login", "Account");
         }
 
         [HttpGet]

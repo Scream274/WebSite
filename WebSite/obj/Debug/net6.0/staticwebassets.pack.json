@@ -5,12 +5,332 @@
       "PackagePath": "staticwebassets\\WebSite.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\css\\demo.css",
+      "PackagePath": "staticwebassets\\admin\\css\\demo.css"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\avatars\\1.png",
+      "PackagePath": "staticwebassets\\admin\\img\\avatars\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\avatars\\5.png",
+      "PackagePath": "staticwebassets\\admin\\img\\avatars\\5.png"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\avatars\\6.png",
+      "PackagePath": "staticwebassets\\admin\\img\\avatars\\6.png"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\avatars\\7.png",
+      "PackagePath": "staticwebassets\\admin\\img\\avatars\\7.png"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\backgrounds\\18.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\backgrounds\\18.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\elements\\1.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\elements\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\elements\\11.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\elements\\11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\elements\\12.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\elements\\12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\elements\\13.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\elements\\13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\elements\\17.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\elements\\17.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\elements\\18.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\elements\\18.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\elements\\19.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\elements\\19.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\elements\\2.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\elements\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\elements\\20.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\elements\\20.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\elements\\3.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\elements\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\elements\\4.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\elements\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\elements\\5.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\elements\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\elements\\7.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\elements\\7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\favicon\\favicon.ico",
+      "PackagePath": "staticwebassets\\admin\\img\\favicon\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\icons\\brands\\asana.png",
+      "PackagePath": "staticwebassets\\admin\\img\\icons\\brands\\asana.png"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\icons\\brands\\behance.png",
+      "PackagePath": "staticwebassets\\admin\\img\\icons\\brands\\behance.png"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\icons\\brands\\dribbble.png",
+      "PackagePath": "staticwebassets\\admin\\img\\icons\\brands\\dribbble.png"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\icons\\brands\\facebook.png",
+      "PackagePath": "staticwebassets\\admin\\img\\icons\\brands\\facebook.png"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\icons\\brands\\github.png",
+      "PackagePath": "staticwebassets\\admin\\img\\icons\\brands\\github.png"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\icons\\brands\\google.png",
+      "PackagePath": "staticwebassets\\admin\\img\\icons\\brands\\google.png"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\icons\\brands\\instagram.png",
+      "PackagePath": "staticwebassets\\admin\\img\\icons\\brands\\instagram.png"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\icons\\brands\\mailchimp.png",
+      "PackagePath": "staticwebassets\\admin\\img\\icons\\brands\\mailchimp.png"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\icons\\brands\\slack.png",
+      "PackagePath": "staticwebassets\\admin\\img\\icons\\brands\\slack.png"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\icons\\brands\\twitter.png",
+      "PackagePath": "staticwebassets\\admin\\img\\icons\\brands\\twitter.png"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\icons\\unicons\\cc-primary.png",
+      "PackagePath": "staticwebassets\\admin\\img\\icons\\unicons\\cc-primary.png"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\icons\\unicons\\cc-success.png",
+      "PackagePath": "staticwebassets\\admin\\img\\icons\\unicons\\cc-success.png"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\icons\\unicons\\cc-warning.png",
+      "PackagePath": "staticwebassets\\admin\\img\\icons\\unicons\\cc-warning.png"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\icons\\unicons\\chart-success.png",
+      "PackagePath": "staticwebassets\\admin\\img\\icons\\unicons\\chart-success.png"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\icons\\unicons\\chart.png",
+      "PackagePath": "staticwebassets\\admin\\img\\icons\\unicons\\chart.png"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\icons\\unicons\\paypal.png",
+      "PackagePath": "staticwebassets\\admin\\img\\icons\\unicons\\paypal.png"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\icons\\unicons\\wallet-info.png",
+      "PackagePath": "staticwebassets\\admin\\img\\icons\\unicons\\wallet-info.png"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\icons\\unicons\\wallet.png",
+      "PackagePath": "staticwebassets\\admin\\img\\icons\\unicons\\wallet.png"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\illustrations\\girl-doing-yoga-light.png",
+      "PackagePath": "staticwebassets\\admin\\img\\illustrations\\girl-doing-yoga-light.png"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\illustrations\\man-with-laptop-light.png",
+      "PackagePath": "staticwebassets\\admin\\img\\illustrations\\man-with-laptop-light.png"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\illustrations\\page-misc-error-light.png",
+      "PackagePath": "staticwebassets\\admin\\img\\illustrations\\page-misc-error-light.png"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\layouts\\layout-container-light.png",
+      "PackagePath": "staticwebassets\\admin\\img\\layouts\\layout-container-light.png"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\layouts\\layout-fluid-light.png",
+      "PackagePath": "staticwebassets\\admin\\img\\layouts\\layout-fluid-light.png"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\layouts\\layout-without-menu-light.png",
+      "PackagePath": "staticwebassets\\admin\\img\\layouts\\layout-without-menu-light.png"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\img\\layouts\\layout-without-navbar-light.png",
+      "PackagePath": "staticwebassets\\admin\\img\\layouts\\layout-without-navbar-light.png"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\js\\config.js",
+      "PackagePath": "staticwebassets\\admin\\js\\config.js"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\js\\dashboards-analytics.js",
+      "PackagePath": "staticwebassets\\admin\\js\\dashboards-analytics.js"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\js\\extended-ui-perfect-scrollbar.js",
+      "PackagePath": "staticwebassets\\admin\\js\\extended-ui-perfect-scrollbar.js"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\js\\form-basic-inputs.js",
+      "PackagePath": "staticwebassets\\admin\\js\\form-basic-inputs.js"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\js\\main.js",
+      "PackagePath": "staticwebassets\\admin\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\js\\pages-account-settings-account.js",
+      "PackagePath": "staticwebassets\\admin\\js\\pages-account-settings-account.js"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\js\\ui-modals.js",
+      "PackagePath": "staticwebassets\\admin\\js\\ui-modals.js"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\js\\ui-popover.js",
+      "PackagePath": "staticwebassets\\admin\\js\\ui-popover.js"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\js\\ui-toasts.js",
+      "PackagePath": "staticwebassets\\admin\\js\\ui-toasts.js"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\vendor\\css\\core.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\css\\core.css"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\vendor\\css\\pages\\page-account-settings.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\css\\pages\\page-account-settings.css"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\vendor\\css\\pages\\page-auth.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\css\\pages\\page-auth.css"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\vendor\\css\\pages\\page-icons.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\css\\pages\\page-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\vendor\\css\\pages\\page-misc.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\css\\pages\\page-misc.css"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\vendor\\css\\theme-default.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\css\\theme-default.css"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\vendor\\fonts\\boxicons.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fonts\\boxicons.css"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\vendor\\fonts\\boxicons\\boxicons.eot",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fonts\\boxicons\\boxicons.eot"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\vendor\\fonts\\boxicons\\boxicons.svg",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fonts\\boxicons\\boxicons.svg"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\vendor\\fonts\\boxicons\\boxicons.ttf",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fonts\\boxicons\\boxicons.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\vendor\\fonts\\boxicons\\boxicons.woff",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fonts\\boxicons\\boxicons.woff"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\vendor\\fonts\\boxicons\\boxicons.woff2",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fonts\\boxicons\\boxicons.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\vendor\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\vendor\\js\\helpers.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\js\\helpers.js"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\vendor\\js\\menu.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\js\\menu.js"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\vendor\\libs\\apex-charts\\apex-charts.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\libs\\apex-charts\\apex-charts.css"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\vendor\\libs\\apex-charts\\apexcharts.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\libs\\apex-charts\\apexcharts.js"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\vendor\\libs\\highlight\\highlight-github.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\libs\\highlight\\highlight-github.css"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\vendor\\libs\\highlight\\highlight.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\libs\\highlight\\highlight.css"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\vendor\\libs\\highlight\\highlight.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\libs\\highlight\\highlight.js"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\vendor\\libs\\jquery\\jquery.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\libs\\jquery\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\vendor\\libs\\masonry\\masonry.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\libs\\masonry\\masonry.js"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\vendor\\libs\\perfect-scrollbar\\perfect-scrollbar.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\libs\\perfect-scrollbar\\perfect-scrollbar.css"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\vendor\\libs\\perfect-scrollbar\\perfect-scrollbar.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\libs\\perfect-scrollbar\\perfect-scrollbar.js"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\admin\\vendor\\libs\\popper\\popper.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\libs\\popper\\popper.js"
+    },
+    {
       "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\assets\\css\\errorpage.css",
       "PackagePath": "staticwebassets\\assets\\css\\errorpage.css"
     },
     {
       "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\assets\\css\\login.css",
       "PackagePath": "staticwebassets\\assets\\css\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\assets\\css\\register.css",
+      "PackagePath": "staticwebassets\\assets\\css\\register.css"
     },
     {
       "Id": "C:\\Users\\Anatolii\\source\\repos\\WebSite(2)\\WebSite\\WebSite\\wwwroot\\assets\\img\\avatars\\author.jpg",

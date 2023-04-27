@@ -173,3 +173,4 @@ C:\Users\Anatolii\source\repos\WebSite(2)\WebSite\WebSite\obj\Debug\net6.0\refin
 C:\Users\Anatolii\source\repos\WebSite(2)\WebSite\WebSite\obj\Debug\net6.0\WebSite.pdb
 C:\Users\Anatolii\source\repos\WebSite(2)\WebSite\WebSite\obj\Debug\net6.0\WebSite.genruntimeconfig.cache
 C:\Users\Anatolii\source\repos\WebSite(2)\WebSite\WebSite\obj\Debug\net6.0\ref\WebSite.dll
+C:\Users\Anatolii\source\repos\WebSite(2)\WebSite\WebSite\obj\Debug\net6.0\scopedcss\Views\Shared\_AdminLayout.cshtml.rz.scp.css

@@ -1,0 +1,64 @@
+﻿/* CSS стили для формы */
+.register-form {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px;
+}
+
+    .register-form h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .register-form div {
+        margin-bottom: 10px;
+    }
+
+    .register-form label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .register-form input {
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        padding: 10px;
+        width: 100%;
+    }
+
+        .register-form input:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+    .register-form .button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        background-color: #4CAF50;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+        .register-form .button:hover {
+            background-color: #3e8e41;
+        }
+
+/* CSS стили для родительского элемента */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}

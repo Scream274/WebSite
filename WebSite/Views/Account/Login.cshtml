@@ -5,6 +5,10 @@
 </head>
 <form asp-controller="Account" asp-action="CheckUser" method="post" class="login-form">
     <div asp-validation-summary="All" class="all"></div>
+    @if (TempData.ContainsKey("SuccessMessage"))
+    {
+        <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+    }
     <h1>Please login</h1>
     <div class="form-group">
         <label for="Enail">Email</label>
