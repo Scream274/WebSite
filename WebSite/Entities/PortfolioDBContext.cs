@@ -22,8 +22,8 @@ namespace WebSite.Entities
 
         public PortfolioDBContext(DbContextOptions options) : base(options)
         {
-            //Database.EnsureDeleted();
-            //Database.EnsureCreated();
+            Database.EnsureDeleted();
+            Database.EnsureCreated();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

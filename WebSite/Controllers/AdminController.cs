@@ -105,5 +105,60 @@ namespace WebSite.Controllers
                 return View("OperationError", new ErrorViewModel() { ErrorMessage = "Unable to access the file." });
             }
         }
+
+        [HttpGet]
+        [Authorize]
+        public IActionResult GetAllWorks()
+        {
+            WorkRepository workRepository = new WorkRepository(_dBContext);
+            var works = workRepository.GetAllWorks();
+            return View("AllWorks", works);
+        }
+
+        [HttpPost]
+        [Authorize]
+        public IActionResult DeleteWork(int id)
+        {
+            var item = _dBContext.Works.Find(id);
+
+            if (item == null)
+            {
+                return NotFound();
+            }
+
+            _dBContext.Works.Remove(item);
+            _dBContext.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
+
+        public IActionResult EditWork(int id)
+        {
+            Work work = _dBContext.Works.Find(id);
+
+            if (work != null)
+            {
+                return View(work);
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
+        [HttpPost]
+        public IActionResult EditWork(Work work)
+        {
+            if (ModelState.IsValid)
+            {
+                _dBContext.Works.Update(work);
+                _dBContext.SaveChanges();
+
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View(work);
+            }
+        }
     }
 }
