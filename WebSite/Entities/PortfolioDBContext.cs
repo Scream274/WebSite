@@ -17,12 +17,13 @@ namespace WebSite.Entities
         public DbSet<Comment> Comments { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
+        public DbSet<UserInfo> UserInfos { get; set; }
 
 
         public PortfolioDBContext(DbContextOptions options) : base(options)
         {
-            //Database.EnsureDeleted();
-            //Database.EnsureCreated();
+            Database.EnsureDeleted();
+            Database.EnsureCreated();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -241,6 +242,43 @@ namespace WebSite.Entities
             modelBuilder.Entity<Option>().HasData(options);
             modelBuilder.Entity<Navigate>().HasData(navigates);
             modelBuilder.Entity<Work>().HasData(works);
+
+            UserInfo[] userInfos = {
+                new UserInfo()
+                {
+                    Id = 1,
+                    UserId = 1,
+                    Avatar = "/admin/img/avatars/avatar.jpg",
+                    PhoneNumber = "+38(099)2569847",
+                    Address = "Paulińska 24, 31-065 Kraków, Poland",
+                    Name = "Martin",
+                    Surname = " Brown",
+                    Info = "Personal info about Martin Brown"              
+                },
+                new UserInfo()
+                {
+                    Id = 2,
+                    UserId = 2,
+                    Avatar = "/admin/img/avatars/5.png",
+                    PhoneNumber = "+ 38(093)8546215",
+                    Address = "Karvesvingen 2, 0579 Oslo, Norway",
+                    Name = "Joe",
+                    Surname = "McCormick",
+                    Info = "Personal info about Joe McCormick"
+                },
+                new UserInfo()
+                {
+                    Id = 3,
+                    UserId = 3,
+                    Avatar = "/admin/img/avatars/7.png",
+                    PhoneNumber = "+ 38(050)9542136",
+                    Address = "Sjukhusbacken 10, 118 83 Stockholm, Sweden",
+                    Name = "Johanes",
+                    Surname = "Johanson",
+                    Info = "Personal info about Johanes Johanson"
+                }
+            };
+            modelBuilder.Entity<UserInfo>().HasData(userInfos);
         }
     }
 }
