@@ -22,8 +22,8 @@ namespace WebSite.Entities
 
         public PortfolioDBContext(DbContextOptions options) : base(options)
         {
-            Database.EnsureDeleted();
-            Database.EnsureCreated();
+            //Database.EnsureDeleted();
+            //Database.EnsureCreated();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -233,7 +233,7 @@ namespace WebSite.Entities
 
             User[] users =
             {
-                new User(){Id = 1, Login = "Admmin", Email = "admin@gmail.com", Password = SecurePasswordHasher.Hash("1234"), RoleId = 1, DateRegister = DateTime.Now},
+                new User(){Id = 1, Login = "Admin", Email = "admin@gmail.com", Password = SecurePasswordHasher.Hash("1234"), RoleId = 1, DateRegister = DateTime.Now},
                 new User(){Id = 2, Login = "Moderator", Email = "moderator@gmail.com", Password = SecurePasswordHasher.Hash("1234"), RoleId = 2, DateRegister = DateTime.Now},
                 new User(){Id = 3, Login = "Reader", Email = "reader@gmail.com", Password = SecurePasswordHasher.Hash("1234"), RoleId = 3, DateRegister = DateTime.Now},
             };

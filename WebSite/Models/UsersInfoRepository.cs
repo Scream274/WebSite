@@ -23,5 +23,22 @@ namespace WebSite.Models
             userInfo.User = user;
             return userInfo;
         }
+
+        internal bool ChangeUserInfo(string email, string login, string name, string surname, string phoneNumber, string address, string info)
+        {
+
+            var user = dBContext.Users.First(u => u.Email == email);
+            var userInfo = dBContext.UserInfos.First(uI => uI.UserId == user.Id);
+
+            user.Login = login;
+            user.Email = email;
+            userInfo.Name = name;
+            userInfo.Surname = surname;
+            userInfo.PhoneNumber = "+38" + phoneNumber;
+            userInfo.Address = address;
+            userInfo.Info = info;
+
+            return dBContext.SaveChanges() == 1;
+        }
     }
 }

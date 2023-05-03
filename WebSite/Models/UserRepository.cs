@@ -27,5 +27,12 @@ namespace WebSite.Models
             dBContext.Users.Add(user);
             dBContext.SaveChanges();
         }
+
+        internal bool ChangePassword(string email, string password)
+        {
+            User user = dBContext.Users.SingleOrDefault(u => u.Email == email);
+            user.Password = password;
+            return dBContext.SaveChanges() == 1;
+        }
     }
 }
