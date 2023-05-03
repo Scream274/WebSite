@@ -69,20 +69,40 @@ namespace WebSite.Controllers
         [Authorize]
         public IActionResult UploadProfileAvatar(IFormFile avatarFile)
         {
-            if (avatarFile != null)
+            if (avatarFile != null && avatarFile.FileName != "")
             {
-                string path = "/admin/img/avatars/" + avatarFile.FileName;
-                string absFilePath = _appEnvironment.WebRootPath + path;
+                long imgSize = avatarFile.Length;
+                string ext = System.IO.Path.GetExtension(avatarFile.FileName).ToLower();
 
-                using (var fileStream = new FileStream(absFilePath, FileMode.Create))
+                if (imgSize > 800000)
                 {
-                    avatarFile.CopyTo(fileStream);
-                    return RedirectToAction("MyProfile", "Admin");
+                    return View("OperationError", new ErrorViewModel() { ErrorMessage = "The file size is too large. It should be no more than 800 KB." });
+                }
+
+                if (ext == ".jpg" || ext == ".png" || ext == ".gif" || ext == ".jpeg" || ext == ".jfif" || ext == ".webp")
+                {
+                    string path = "/admin/img/avatars/";
+
+                    var userInfo = _userInfoRepository.getUserInfoByEmail(User.Identity.Name);
+
+                    string absFilePath = _appEnvironment.WebRootPath + path + userInfo.User.Login + "_" + userInfo.User.Id + ext;
+                    using (var fileStream = new FileStream(absFilePath, FileMode.Create))
+                    {
+                        avatarFile.CopyTo(fileStream);
+                        userInfo.Avatar = path + userInfo.User.Login + "_" + userInfo.User.Id + ext;
+                        _dBContext.SaveChanges();
+
+                        return RedirectToAction("MyProfile", "Admin");
+                    }
+                }
+                else
+                {
+                    return View("OperationError", new ErrorViewModel() { ErrorMessage = "Unknown file extension." });
                 }
             }
             else
             {
-                return View("OperationError");
+                return View("OperationError", new ErrorViewModel() { ErrorMessage = "Unable to access the file." });
             }
         }
     }
