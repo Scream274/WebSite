@@ -160,5 +160,61 @@ namespace WebSite.Controllers
                 return View(work);
             }
         }
+
+
+        [HttpGet]
+        [Authorize]
+        public IActionResult GetAllPosts()
+        {
+            PostsRepository postsRepository = new PostsRepository(_dBContext);
+            var posts = postsRepository.GetPosts();
+            return View("AllPosts", posts);
+        }
+
+        [HttpPost]
+        [Authorize]
+        public IActionResult DeletePost(int id)
+        {
+            var item = _dBContext.Posts.Find(id);
+
+            if (item == null)
+            {
+                return NotFound();
+            }
+
+            _dBContext.Posts.Remove(item);
+            _dBContext.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
+
+        public IActionResult EditPost(int id)
+        {
+            Post post = _dBContext.Posts.Find(id);
+
+            if (post != null)
+            {
+                return View(post);
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
+        [HttpPost]
+        public IActionResult EditPost(Post post)
+        {
+            if (ModelState.IsValid)
+            {
+                _dBContext.Posts.Update(post);
+                _dBContext.SaveChanges();
+
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View(post);
+            }
+        }
     }
 }
