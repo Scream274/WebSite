@@ -27,6 +27,12 @@
     <Content Remove="wwwroot\assets\img\person_1_sq.jpg" />
     <Content Remove="wwwroot\assets\img\person_2.jpg" />
     <Content Remove="wwwroot\assets\img\person_3.jpg" />
+    <Content Remove="wwwroot\assets\img\works\img_1.jpg" />
+    <Content Remove="wwwroot\assets\img\works\img_1_big.jpg" />
+    <Content Remove="wwwroot\assets\img\works\img_2.jpg" />
+    <Content Remove="wwwroot\assets\img\works\img_3.jpg" />
+    <Content Remove="wwwroot\assets\img\works\img_4.jpg" />
+    <Content Remove="wwwroot\assets\img\works\img_5.jpg" />
     <Content Remove="wwwroot\assets\js\main.js" />
     <Content Remove="wwwroot\assets\scss\Readme.txt" />
     <Content Remove="wwwroot\assets\vendor\aos\aos.css" />
@@ -120,7 +126,6 @@
     <None Include="wwwroot\assets\img\img_3.jpg" />
     <None Include="wwwroot\assets\img\img_4.jpg" />
     <None Include="wwwroot\assets\img\img_5.jpg" />
-    <None Include="wwwroot\assets\img\img_6.jpg" />
     <None Include="wwwroot\assets\img\logo-adobe.png" />
     <None Include="wwwroot\assets\img\logo-apple.png" />
     <None Include="wwwroot\assets\img\logo-google.png" />
@@ -131,6 +136,12 @@
     <None Include="wwwroot\assets\img\person_1_sq.jpg" />
     <None Include="wwwroot\assets\img\person_2.jpg" />
     <None Include="wwwroot\assets\img\person_3.jpg" />
+    <None Include="wwwroot\assets\img\works\img_1.jpg" />
+    <None Include="wwwroot\assets\img\works\img_1_big.jpg" />
+    <None Include="wwwroot\assets\img\works\img_2.jpg" />
+    <None Include="wwwroot\assets\img\works\img_3.jpg" />
+    <None Include="wwwroot\assets\img\works\img_4.jpg" />
+    <None Include="wwwroot\assets\img\works\img_5.jpg" />
     <None Include="wwwroot\assets\js\main.js" />
     <None Include="wwwroot\assets\scss\Readme.txt" />
     <None Include="wwwroot\assets\vendor\aos\aos.css" />

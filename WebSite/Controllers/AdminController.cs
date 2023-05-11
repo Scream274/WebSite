@@ -27,7 +27,8 @@ namespace WebSite.Controllers
             {
                 ViewBag.Role = User.FindFirst(u => u.Type == ClaimsIdentity.DefaultRoleClaimType).Value;
                 return View("Main");
-            } else
+            }
+            else
             {
                 return RedirectToAction("Login", "Account");
             }
@@ -119,16 +120,20 @@ namespace WebSite.Controllers
         [Authorize]
         public IActionResult DeleteWork(int id)
         {
-            var item = _dBContext.Works.Find(id);
+            var workToDelete = _dBContext.Works.Find(id);
 
-            if (item == null)
+            if (workToDelete == null)
             {
                 return NotFound();
             }
 
-            _dBContext.Works.Remove(item);
+            _dBContext.Works.Remove(workToDelete);
             _dBContext.SaveChanges();
-            return RedirectToAction(nameof(Index));
+
+            string absFileToRemovePath = _appEnvironment.WebRootPath + workToDelete.ImgSrc;
+            System.IO.File.Delete(absFileToRemovePath);
+
+            return RedirectToAction(nameof(GetAllWorks));
         }
 
         public IActionResult EditWork(int id)

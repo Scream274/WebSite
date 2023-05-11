@@ -22,8 +22,8 @@ namespace WebSite.Entities
 
         public PortfolioDBContext(DbContextOptions options) : base(options)
         {
-            //Database.EnsureDeleted();
-            //Database.EnsureCreated();
+            Database.EnsureDeleted();
+            Database.EnsureCreated();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -147,8 +147,8 @@ namespace WebSite.Entities
                 {
                     Id = 1,
                     Title = "Boxed Water",
-                    ImgSrc = "/assets/img/img_1.jpg",
-                    BigImgSrc = "/assets/img/img_1_big.jpg",
+                    ImgSrc = "/assets/img/works/img_1.jpg",
+                    BigImgSrc = "/assets/img/works/img_1_big.jpg",
                     ImgAlt = "Boxed Water",
                     Category = "Web",
                     Description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore.",
@@ -160,8 +160,8 @@ namespace WebSite.Entities
                 {
                     Id = 2,
                     Title = "Cocooil",
-                    ImgSrc = "/assets/img/img_3.jpg",
-                    BigImgSrc = "/assets/img/img_1_big.jpg",
+                    ImgSrc = "/assets/img/works/img_3.jpg",
+                    BigImgSrc = "/assets/img/works/img_1_big.jpg",
                     ImgAlt = "Cocooil",
                     Category = "Branding",
                     Description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore.",
@@ -173,8 +173,8 @@ namespace WebSite.Entities
                 {
                     Id = 3,
                     Title = "Build Indoo",
-                    ImgSrc = "/assets/img/img_2.jpg",
-                    BigImgSrc = "/assets/img/img_1_big.jpg",
+                    ImgSrc = "/assets/img/works/img_2.jpg",
+                    BigImgSrc = "/assets/img/works/img_1_big.jpg",
                     ImgAlt = "Build Indoo",
                     Category = "Photography",
                     Description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore.",
@@ -186,8 +186,8 @@ namespace WebSite.Entities
                 {
                     Id = 4,
                     Title = "Nike Shoe",
-                    ImgSrc = "/assets/img/img_4.jpg",
-                    BigImgSrc = "/assets/img/img_1_big.jpg",
+                    ImgSrc = "/assets/img/works/img_4.jpg",
+                    BigImgSrc = "/assets/img/works/img_1_big.jpg",
                     ImgAlt = "Nike Shoe",
                     Category = "Design",
                     Description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore.",
@@ -199,8 +199,8 @@ namespace WebSite.Entities
                 {
                     Id = 5,
                     Title = "Kitchen Sink",
-                    ImgSrc = "/assets/img/img_5.jpg",
-                    BigImgSrc = "/assets/img/img_1_big.jpg",
+                    ImgSrc = "/assets/img/works/img_5.jpg",
+                    BigImgSrc = "/assets/img/works/img_1_big.jpg",
                     ImgAlt = "Kitchen Sink",
                     Category = "Design",
                     Description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore.",
@@ -212,8 +212,8 @@ namespace WebSite.Entities
                 {
                     Id = 6,
                     Title = "Amazon",
-                    ImgSrc = "/assets/img/img_6.jpg",
-                    BigImgSrc = "/assets/img/img_1_big.jpg",
+                    ImgSrc = "/assets/img/works/img_6.jpg",
+                    BigImgSrc = "/assets/img/works/img_1_big.jpg",
                     ImgAlt = "Amazon",
                     Category = "Branding",
                     Description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore.",
