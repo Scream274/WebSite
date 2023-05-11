@@ -136,6 +136,15 @@ namespace WebSite.Controllers
             return RedirectToAction(nameof(GetAllWorks));
         }
 
+        [HttpGet]
+        [Authorize]
+        public IActionResult AddNewWOrk()
+        {
+            return View("AddNewWork");
+        }
+
+        [HttpGet]
+        [Authorize]
         public IActionResult EditWork(int id)
         {
             Work work = _dBContext.Works.Find(id);
@@ -151,6 +160,39 @@ namespace WebSite.Controllers
         }
 
         [HttpPost]
+        [Authorize]
+        public IActionResult AddNewWork(Work work, IFormFile ImgSrc)
+        {
+            if (ModelState.IsValid)
+            {
+                _dBContext.Works.Add(work);
+                _dBContext.SaveChanges();
+
+                if (ImgSrc != null && ImgSrc.Length > 0)
+                {
+                    string fileName = $"{work.Slug}{Path.GetExtension(ImgSrc.FileName)}";
+
+                    string path = Path.Combine(_appEnvironment.WebRootPath, "assets", "img", "works", fileName);
+
+                    using (var stream = new FileStream(path, FileMode.Create))
+                    {
+                        ImgSrc.CopyTo(stream);
+                    }
+
+                    work.ImgSrc = $"/assets/img/works/{fileName}";
+                    work.BigImgSrc = work.ImgSrc;
+                    work.ImgAlt = work.Slug;
+                    _dBContext.SaveChanges();
+                }
+
+                return RedirectToAction(nameof(GetAllWorks));
+            }
+
+            return View();
+        }
+
+        [HttpPost]
+        [Authorize]
         public IActionResult EditWork(Work work)
         {
             if (ModelState.IsValid)

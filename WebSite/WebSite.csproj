@@ -16,7 +16,6 @@
     <Content Remove="wwwroot\assets\img\img_3.jpg" />
     <Content Remove="wwwroot\assets\img\img_4.jpg" />
     <Content Remove="wwwroot\assets\img\img_5.jpg" />
-    <Content Remove="wwwroot\assets\img\img_6.jpg" />
     <Content Remove="wwwroot\assets\img\logo-adobe.png" />
     <Content Remove="wwwroot\assets\img\logo-apple.png" />
     <Content Remove="wwwroot\assets\img\logo-google.png" />
