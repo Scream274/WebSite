@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebSite.Entities;
 using WebSite.Models;
+using WebSite.Services;
 
 namespace WebSite.Controllers
 {
@@ -70,35 +71,34 @@ namespace WebSite.Controllers
         [Authorize]
         public IActionResult UploadProfileAvatar(IFormFile avatarFile)
         {
-            if (avatarFile != null && avatarFile.FileName != "")
+            if (avatarFile != null && avatarFile.Length > 0)
             {
-                long imgSize = avatarFile.Length;
-                string ext = System.IO.Path.GetExtension(avatarFile.FileName).ToLower();
+                var userInfo = _userInfoRepository.getUserInfoByEmail(User.Identity.Name);
 
-                if (imgSize > 800000)
+                try
                 {
-                    return View("OperationError", new ErrorViewModel() { ErrorMessage = "The file size is too large. It should be no more than 800 KB." });
-                }
+                    string imgSrc = FileService.UploadFile(avatarFile, _appEnvironment.WebRootPath, "avatars", userInfo.User.Login, userInfo.Avatar);
 
-                if (ext == ".jpg" || ext == ".png" || ext == ".gif" || ext == ".jpeg" || ext == ".jfif" || ext == ".webp")
-                {
-                    string path = "/admin/img/avatars/";
+                    Console.WriteLine("ImgSrc " + imgSrc);
 
-                    var userInfo = _userInfoRepository.getUserInfoByEmail(User.Identity.Name);
-
-                    string absFilePath = _appEnvironment.WebRootPath + path + userInfo.User.Login + "_" + userInfo.User.Id + ext;
-                    using (var fileStream = new FileStream(absFilePath, FileMode.Create))
+                    if (imgSrc != null)
                     {
-                        avatarFile.CopyTo(fileStream);
-                        userInfo.Avatar = path + userInfo.User.Login + "_" + userInfo.User.Id + ext;
+                        userInfo.Avatar = imgSrc;
                         _dBContext.SaveChanges();
-
                         return RedirectToAction("MyProfile", "Admin");
                     }
+                    else
+                    {
+                        return View("OperationError", new ErrorViewModel() { ErrorMessage = "Unable to upload file." });
+                    }
                 }
-                else
+                catch (ArgumentException ex)
                 {
-                    return View("OperationError", new ErrorViewModel() { ErrorMessage = "Unknown file extension." });
+                    return View("OperationError", new ErrorViewModel() { ErrorMessage = ex.Message });
+                }
+                catch (Exception)
+                {
+                    return View("OperationError", new ErrorViewModel() { ErrorMessage = "An error occurred while uploading the file." });
                 }
             }
             else
@@ -151,7 +151,7 @@ namespace WebSite.Controllers
 
             if (work != null)
             {
-                return View(work);
+                return View("EditWork", work);
             }
             else
             {
@@ -193,19 +193,34 @@ namespace WebSite.Controllers
 
         [HttpPost]
         [Authorize]
-        public IActionResult EditWork(Work work)
+        public IActionResult EditWork(Work model, IFormFile ImgSrc)
         {
-            if (ModelState.IsValid)
-            {
-                _dBContext.Works.Update(work);
-                _dBContext.SaveChanges();
+            var work = _dBContext.Works.FirstOrDefault(w => w.Id == model.Id);
 
-                return RedirectToAction("Index");
-            }
-            else
+            if (work == null)
             {
-                return View(work);
+                return NotFound();
             }
+
+            if (ImgSrc != null && ImgSrc.Length > 0)
+            {
+                var imgSrc = FileService.UploadFile(ImgSrc, _appEnvironment.WebRootPath, "works", model.Slug, work.ImgSrc);
+
+                work.ImgSrc = imgSrc;
+                work.BigImgSrc = imgSrc;
+                work.ImgAlt = work.Slug;
+            }
+
+            work.Title = model.Title;
+            work.Category = model.Category;
+            work.Description = model.Description;
+            work.Content = model.Content;
+            work.Keywords = model.Keywords;
+            work.Slug = model.Slug;
+
+            _dBContext.SaveChanges();
+
+            return RedirectToAction(nameof(GetAllWorks));
         }
 
 

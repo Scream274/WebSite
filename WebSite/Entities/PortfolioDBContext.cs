@@ -248,7 +248,7 @@ namespace WebSite.Entities
                 {
                     Id = 1,
                     UserId = 1,
-                    Avatar = "/admin/img/avatars/avatar.jpg",
+                    Avatar = "/assets/img/avatars/default.jpg",
                     PhoneNumber = "+38(099)2569847",
                     Address = "Paulińska 24, 31-065 Kraków, Poland",
                     Name = "Martin",
@@ -259,7 +259,7 @@ namespace WebSite.Entities
                 {
                     Id = 2,
                     UserId = 2,
-                    Avatar = "/admin/img/avatars/5.png",
+                    Avatar = "/assets/img/avatars/default.jpg",
                     PhoneNumber = "+ 38(093)8546215",
                     Address = "Karvesvingen 2, 0579 Oslo, Norway",
                     Name = "Joe",
@@ -270,7 +270,7 @@ namespace WebSite.Entities
                 {
                     Id = 3,
                     UserId = 3,
-                    Avatar = "/admin/img/avatars/7.png",
+                    Avatar = "/assets/img/avatars/default.jpg",
                     PhoneNumber = "+ 38(050)9542136",
                     Address = "Sjukhusbacken 10, 118 83 Stockholm, Sweden",
                     Name = "Johanes",
